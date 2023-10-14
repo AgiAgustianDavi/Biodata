@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+    100% 
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(9, 83, 255, 0.882);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.5px);
+    /* overflow: hidden; */
+}
+
+h2 {
+    font-size: 2em;
+    color: #d1df05;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 250px;
+    margin: 13.5px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(215, 17, 17, 0.66);
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.882);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.input-box input:valid ~ label,
+.input-box input:focus ~ label
+{
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    /* background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4; */
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+    letter-spacing: 0.2em;
+}
+
+/* .input-box:nth-child() input:valid ~ label,
+.input-box:nth-child() input:focus ~ label
+{
+    background: #00dfc4;
+    color: #1d2b3a;
+    border-radius: 2px;
+} */
+
+.input-box input:valid,
+.input-box input:focus
+{
+    border: 1px solid #00dfc4;
+}
+
+.competition {
+    background-color: rgba(215, 17, 17, 0.66);
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.882);
+}
+
+.button {
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button button {
+    padding: 5px;
+    /* height: 40px; */
+    /* text-align: center; */
+    background: #fff;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* font-size: 1.1em; */
+    color: #1d2b3a;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.button button:hover {
+    /* letter-spacing: 0.2em; */
+    font-size: 1.2em;
+    padding: 10px;
+    box-shadow:0 0 3rem blue;
+    /* height: 45px; */
+    background: blue;
+    color: #fff;
+}
+
+.button a {
+    font-size: 1.1sem;
+    padding: 5px;
+    text-decoration: none;
+    /* height: 40px; */
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #1d2b3a;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.button a:hover {
+    /* letter-spacing: 0.2em; */
+    font-size: 1.2em;
+    padding: 10px;
+    box-shadow:0 0 3rem blue;
+    /* height: 45px; */
+    background: blue;
+    color: #fff;
+}
+
+@media (max-width: 360px) {
+    .form-box {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .input-box {
+        width: 290px;
+    }
+}
